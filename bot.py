@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import telebot
 import os
-import constant
+#import constant
 
 #main variables
 token = os.environ[constant.TELEGRAM_TOKEN]
