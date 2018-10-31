@@ -4,7 +4,7 @@ import os
 #import constant
 
 #main variables
-token = os.environ[constant.TELEGRAM_TOKEN]
+token = os.environ[TELEGRAM_TOKEN]
 bot = telebot.TeleBot(token)
 @bot.message_handler(commands=['start', 'go'])
 def start_handler(message):
