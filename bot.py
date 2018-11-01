@@ -15,8 +15,7 @@ bot = telebot.TeleBot(token)
 
 y = yadisk.YaDisk(token=os.environ['YADISK_TOKEN'])#constant.YADISK_TOKEN)
 
-bot.send_message(message.chat.id, y.check_token())
-bot.send_message(message.chat.id, list(y.listdir("/Photo_BACKUP")))
+
 
 #print(y.check_token())
 #print(list(y.listdir("/Photo_BACKUP")))
@@ -26,6 +25,8 @@ bot.send_message(message.chat.id, list(y.listdir("/Photo_BACKUP")))
 @bot.message_handler(commands=['start', 'go'])
 def start_handler(message):
     bot.send_message(message.chat.id, "I'm up and running")
+    bot.send_message(message.chat.id, y.check_token())
+    bot.send_message(message.chat.id, list(y.listdir("/Photo_BACKUP")))
 
 
 bot.polling()
