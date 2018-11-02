@@ -4,6 +4,7 @@ from telebot import apihelper
 import os
 #import constant
 import yadisk
+import datetime
 
 #main variables
 token = os.environ['TELEGRAM_TOKEN']
@@ -15,7 +16,7 @@ bot = telebot.TeleBot(token)
 
 y = yadisk.YaDisk(token=os.environ['YADISK_TOKEN'])#constant.YADISK_TOKEN)
 
-
+print(datetime.datetime.now())
 #@bot.message_handler(commands=['start', 'go'])
 #def start_handler(message):
 bot.send_message(chat_id='202906676', text="I'm up and running")
